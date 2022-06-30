@@ -73,11 +73,11 @@ body {
   width: fit-content;
   border-radius: 30px;
   color: white;
-  background: rgb(147, 86, 220);
-  background: linear-gradient(301deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
   border: none;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
+  transition: 0.5s;
   margin: 0 auto;
 }
 #container-explore button:hover {
@@ -167,12 +167,6 @@ body {
   font-weight: 300;
   margin-bottom: 0;
   margin-top: 0;
-}
-#container-restaurant .restaurant-card .info-like {
-  position: relative;
-  left: 85%;
-  bottom: 50px;
-  font-size: 30px;
 }
 @media (min-width: 1024px) {
   #container-restaurant .restaurant-card {
@@ -297,12 +291,6 @@ body {
     margin-bottom: 0;
     margin-top: 0;
   }
-  #container-restaurant .restaurant-card .info-like {
-    position: relative;
-    left: 85%;
-    bottom: 50px;
-    font-size: 30px;
-  }
 }
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
   #container-restaurant .restaurant-card {
@@ -362,6 +350,9 @@ body {
   margin-right: 7%;
   font-size: 30px;
 }
+.menu-name i:hover {
+  color: red;
+}
 
 .menu-content {
   margin-left: 5%;
@@ -384,6 +375,8 @@ body {
   border-radius: 18px;
   position: relative;
   margin-bottom: 4%;
+  -webkit-animation: onLoadAnimation ease 1s;
+          animation: onLoadAnimation ease 1s;
 }
 .menu-content .menu-dish p {
   margin: 1%;
@@ -393,17 +386,60 @@ body {
 .menu-content .menu-dish .dish-title {
   padding-top: 3%;
   font-size: 23px;
+  max-width: 70%;
 }
 .menu-content .menu-dish .dish-description {
   font-weight: 300;
   font-size: 20px;
   padding-bottom: 3%;
+  max-width: 70%;
 }
 .menu-content .menu-dish .dish-price {
   position: absolute;
   bottom: 10px;
   right: 20px;
   font-size: 20px;
+}
+.menu-content .menu-dish .dish-check {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  font-size: 25px;
+  background-color: #99E2D0;
+  color: white;
+  padding: 5% 5% 5% 5%;
+  border-radius: 0 18px 18px 0;
+  transform: translateX(20%);
+}
+.menu-content .menu-dish:hover .dish-check {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 1s ease;
+}
+.menu-content .menu-dish:hover .dish-price {
+  right: 20%;
+}
+@-webkit-keyframes onLoadAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes onLoadAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .order-btn {
@@ -420,11 +456,11 @@ body {
   width: fit-content;
   border-radius: 30px;
   color: white;
-  background: rgb(147, 86, 220);
-  background: linear-gradient(301deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
   border: none;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
+  transition: 0.5s;
   padding-left: 10%;
   padding-right: 10%;
 }

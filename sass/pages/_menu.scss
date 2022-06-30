@@ -45,6 +45,9 @@
     i{
         margin-right: 7%;
         font-size: 30px;
+        &:hover{
+            color: red;
+        }
     }
 }
 
@@ -64,8 +67,9 @@
         margin-bottom: 4%;
     }
     .menu-dish{
-        @include menu-dish
-    }
+        @include menu-dish;
+        @include onload;
+    }    
 }
 
 .order-btn{
