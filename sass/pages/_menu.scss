@@ -1,0 +1,82 @@
+#container-header{
+    background-color: $soft-grey;
+    margin: 0;
+    padding: 5% 0 4% 0;
+    .back-arrow{
+        position: absolute;
+        left: 5%;
+        top: 3%;
+        font-size: 25px
+    }
+}
+
+
+.image-restaurant{
+    @include menu-img;
+    z-index: 1;
+
+}
+
+
+.container-menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -40px;
+    background-color: $soft-grey;
+    padding-left: 0;
+    padding-top: 10%;
+}
+
+.menu-name{
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font-logo;
+    font-size: 25px;
+    margin-top: -50px;
+    z-index: 2;
+    background-color: $soft-grey;
+    h2{
+        margin-left: 5%;
+    }
+    i{
+        margin-right: 7%;
+        font-size: 30px;
+    }
+}
+
+
+.menu-content{
+    margin-left: 5%;
+    .menu-title{
+        font-size: 22px;
+        font-family: $font-basic;
+        text-transform: uppercase;
+        font-weight: $light;
+        margin-bottom: 0;
+    }
+    .title-underline{
+        width: 50px;
+        border-top: 3px solid $light-gray;
+        margin-bottom: 4%;
+    }
+    .menu-dish{
+        @include menu-dish
+    }
+}
+
+.order-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20%;
+    margin-top: 10%;
+    button{
+        @include btn;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}

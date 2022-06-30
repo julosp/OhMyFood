@@ -206,6 +206,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: white;
+  padding-bottom: 0;
 }
 #footer-container ul i {
   margin-right: 10px;
@@ -308,4 +309,125 @@ body {
     width: 30%;
     margin: 2% 2% 0 2%;
   }
+}
+#container-header {
+  background-color: rgb(243, 243, 243);
+  margin: 0;
+  padding: 5% 0 4% 0;
+}
+#container-header .back-arrow {
+  position: absolute;
+  left: 5%;
+  top: 3%;
+  font-size: 25px;
+}
+
+.image-restaurant {
+  width: 100%;
+  z-index: 1;
+}
+.image-restaurant img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 350px;
+}
+
+.container-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: -40px;
+  background-color: rgb(243, 243, 243);
+  padding-left: 0;
+  padding-top: 10%;
+}
+
+.menu-name {
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Shrikhand";
+  font-size: 25px;
+  margin-top: -50px;
+  z-index: 2;
+  background-color: rgb(243, 243, 243);
+}
+.menu-name h2 {
+  margin-left: 5%;
+}
+.menu-name i {
+  margin-right: 7%;
+  font-size: 30px;
+}
+
+.menu-content {
+  margin-left: 5%;
+}
+.menu-content .menu-title {
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.menu-content .title-underline {
+  width: 50px;
+  border-top: 3px solid #99E2D0;
+  margin-bottom: 4%;
+}
+.menu-content .menu-dish {
+  background-color: white;
+  width: 95%;
+  border-radius: 18px;
+  position: relative;
+  margin-bottom: 4%;
+}
+.menu-content .menu-dish p {
+  margin: 1%;
+  font-family: "Roboto", sans-serif;
+  padding-left: 2%;
+}
+.menu-content .menu-dish .dish-title {
+  padding-top: 3%;
+  font-size: 23px;
+}
+.menu-content .menu-dish .dish-description {
+  font-weight: 300;
+  font-size: 20px;
+  padding-bottom: 3%;
+}
+.menu-content .menu-dish .dish-price {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 20px;
+}
+
+.order-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20%;
+  margin-top: 10%;
+}
+.order-btn button {
+  padding: 4% 5% 4% 5%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 30px;
+  color: white;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(301deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.order-btn button:hover {
+  box-shadow: 2px 3px 17px -4px #000000;
 }/*# sourceMappingURL=style.css.map */
