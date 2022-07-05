@@ -389,6 +389,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   font-family: "Shrikhand";
   font-size: 25px;
   margin-top: -50px;
@@ -457,6 +458,9 @@ a {
   margin: 1%;
   font-family: "Roboto", sans-serif;
   padding-left: 2%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu-content .menu-dish .dish-title {
   padding-top: 3%;
@@ -488,10 +492,17 @@ a {
   border-radius: 0 18px 18px 0;
   transform: translateX(20%);
 }
+.menu-content .menu-dish .dish-check i {
+  transition: transform 1s ease;
+  transform: rotate(180deg);
+}
 .menu-content .menu-dish:hover .dish-check {
   opacity: 1;
   transform: translateX(0);
   transition: transform 1s ease;
+}
+.menu-content .menu-dish:hover .dish-check i {
+  transform: rotate(360deg);
 }
 .menu-content .menu-dish:hover .dish-price {
   right: 20%;

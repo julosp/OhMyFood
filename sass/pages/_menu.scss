@@ -36,6 +36,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
     font-family: $font-logo;
     font-size: 25px;
     margin-top: -50px;

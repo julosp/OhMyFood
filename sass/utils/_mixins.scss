@@ -138,11 +138,13 @@
     border-radius: 18px;
     position: relative;
     margin-bottom: 4%;
-
     p{
         margin: 1%;
         font-family: $font-basic;
         padding-left: 2%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     .dish-title{
         padding-top: 3%;
@@ -171,15 +173,21 @@
         font-size: 25px;
         background-color: $light-gray;
         color: white;
-
         border-radius: 0 18px 18px 0;
         transform: translateX(20%);
+        i{
+            transition: transform 1s ease;
+            transform: rotate(180deg)
+        }
     }
     &:hover{
         .dish-check{
             opacity: 1;
             transform: translateX(0);
-            transition: transform 1s ease
+            transition: transform 1s ease;
+            i{
+                transform: rotate(360deg);
+            }
         }
         .dish-price{
             right: 20%
