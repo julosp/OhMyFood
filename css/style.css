@@ -3,6 +3,15 @@ body {
   box-sizing: border-box;
 }
 
+a:visited {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /*FONT*/
 /*COLORS*/
 #container-header {
@@ -29,6 +38,7 @@ body {
   width: 100%;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  box-shadow: inset 0px 8px 37px -7px rgba(0, 0, 0, 0.077);
 }
 #container-location i {
   margin-right: 2%;
@@ -81,6 +91,7 @@ body {
   margin: 0 auto;
 }
 #container-explore button:hover {
+  background-image: linear-gradient(to top, #bc85ff 0%, #FF79DA 100%);
   box-shadow: 2px 3px 17px -4px #000000;
 }
 
@@ -144,6 +155,7 @@ body {
   border-radius: 25px;
   box-shadow: 2px 3px 17px -4px rgba(0, 0, 0, 0.3019607843);
   font-family: "Roboto", sans-serif;
+  position: relative;
 }
 #container-restaurant .restaurant-card:hover {
   box-shadow: 2px 3px 17px -4px rgba(0, 0, 0, 0.6);
@@ -162,6 +174,7 @@ body {
 #container-restaurant .restaurant-card .info-title {
   font-size: 20px;
   margin-bottom: 2%;
+  margin-top: 4%;
 }
 #container-restaurant .restaurant-card .info-location {
   font-weight: 300;
@@ -174,17 +187,53 @@ body {
     margin: 2% 2% 0 2%;
   }
 }
-
-.info-new {
-  position: relative;
-  bottom: 350px;
-  left: 70%;
+#container-restaurant .restaurant-card .info-like:hover {
+  opacity: 0;
+  transition: 0.7s ease-in;
+}
+#container-restaurant .restaurant-card .like-full {
+  opacity: 0;
+  transition: 0.7s linear;
+  scale: 0;
+  transform-origin: 50% 60%;
+}
+#container-restaurant .restaurant-card .info-like:hover ~ .like-full {
+  opacity: 1;
+  scale: 1;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
+}
+#container-restaurant .restaurant-card .info-new {
+  position: absolute;
+  top: 1%;
+  right: 3%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   background-color: #99E2D0;
   color: green;
   padding: 5px 15px 5px 15px;
+}
+
+.info-card {
+  position: relative;
+}
+.info-card .info-like {
+  position: absolute;
+  font-size: 25px;
+  padding: 5% 5% 5% 5%;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.info-card .like-full {
+  position: absolute;
+  font-size: 25px;
+  padding: 5% 5% 5% 5%;
+  right: 0;
+  bottom: 0;
 }
 
 #footer-container {
@@ -285,6 +334,7 @@ body {
   #container-restaurant .restaurant-card .info-title {
     font-size: 20px;
     margin-bottom: 2%;
+    margin-top: 4%;
   }
   #container-restaurant .restaurant-card .info-location {
     font-weight: 300;
@@ -302,12 +352,14 @@ body {
   background-color: rgb(243, 243, 243);
   margin: 0;
   padding: 5% 0 4% 0;
+  position: relative;
 }
 #container-header .back-arrow {
   position: absolute;
   left: 5%;
-  top: 3%;
+  top: 25%;
   font-size: 25px;
+  color: black;
 }
 
 .image-restaurant {
@@ -340,18 +392,41 @@ body {
   font-family: "Shrikhand";
   font-size: 25px;
   margin-top: -50px;
-  z-index: 2;
   background-color: rgb(243, 243, 243);
+}
+.menu-name .info-like:hover {
+  opacity: 0;
+  transition: 0.7s ease-in;
+}
+.menu-name .like-full {
+  opacity: 0;
+  transition: 0.7s linear;
+  scale: 0;
+  transform-origin: 50% 60%;
+}
+.menu-name .info-like:hover ~ .like-full {
+  opacity: 1;
+  scale: 1;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
 }
 .menu-name h2 {
   margin-left: 5%;
+  margin-right: 15%;
 }
-.menu-name i {
-  margin-right: 7%;
+.menu-name .info-like {
+  position: absolute;
+  right: 7%;
   font-size: 30px;
+  cursor: pointer;
 }
-.menu-name i:hover {
-  color: red;
+.menu-name .like-full {
+  position: absolute;
+  right: 7%;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .menu-content {
@@ -404,12 +479,12 @@ body {
   opacity: 0;
   position: absolute;
   right: 0;
-  bottom: 0;
   top: 0;
+  bottom: 0;
+  padding: 6%;
   font-size: 25px;
   background-color: #99E2D0;
   color: white;
-  padding: 5% 5% 5% 5%;
   border-radius: 0 18px 18px 0;
   transform: translateX(20%);
 }
@@ -465,5 +540,6 @@ body {
   padding-right: 10%;
 }
 .order-btn button:hover {
+  background-image: linear-gradient(to top, #bc85ff 0%, #FF79DA 100%);
   box-shadow: 2px 3px 17px -4px #000000;
 }/*# sourceMappingURL=style.css.map */

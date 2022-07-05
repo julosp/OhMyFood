@@ -2,3 +2,12 @@ body{
     margin: auto 0;
     box-sizing: border-box;
 }
+
+a:visited{
+    color: inherit;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}

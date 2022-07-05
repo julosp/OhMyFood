@@ -24,6 +24,7 @@
     width: 100%;
     font-family: $font-basic;
     font-weight: $light;
+    box-shadow: inset 0px 8px 37px -7px rgba(0, 0, 0, 0.077);
     i{
         margin-right: 2%;
     }
@@ -93,7 +94,7 @@
     }
     &:hover{
         i{
-            color: $light-violet;
+            color: $light-violet
         }
     }
 }
@@ -107,11 +108,32 @@
     padding-top: 5%;
     background-color: $soft-grey;
     .restaurant-card{
-        @include card
+        @include card;
+        @include like;
+        position: relative;
+        .info-new{
+            @include new
+        }
      }
 }
-.info-new{
-    @include new
+
+.info-card{
+    position: relative;
+    .info-like{
+        position: absolute;
+        font-size: 25px;
+        padding: 5% 5% 5% 5%;
+        right: 0;
+        bottom: 0; 
+        z-index: 1;    
+    }    
+    .like-full{
+        position: absolute;
+        font-size: 25px;
+        padding: 5% 5% 5% 5%;
+        right: 0;
+        bottom: 0; 
+    }
 }
 
 #footer-container{

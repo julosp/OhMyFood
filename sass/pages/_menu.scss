@@ -2,11 +2,13 @@
     background-color: $soft-grey;
     margin: 0;
     padding: 5% 0 4% 0;
+    position: relative;
     .back-arrow{
         position: absolute;
         left: 5%;
-        top: 3%;
-        font-size: 25px
+        top: 25%;
+        font-size: 25px;
+        color: black
     }
 }
 
@@ -37,17 +39,23 @@
     font-family: $font-logo;
     font-size: 25px;
     margin-top: -50px;
-    z-index: 2;
     background-color: $soft-grey;
+    @include like;
     h2{
         margin-left: 5%;
+        margin-right: 15%;
     }
-    i{
-        margin-right: 7%;
+    .info-like{
+        position: absolute;
+        right: 7%;
         font-size: 30px;
-        &:hover{
-            color: red;
-        }
+        cursor:pointer ;
+    }
+    .like-full{
+        position: absolute;
+        right: 7%;
+        font-size: 30px;
+        cursor:pointer ;
     }
 }
 
