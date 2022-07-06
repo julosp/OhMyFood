@@ -1,8 +1,3 @@
-body {
-  margin: auto 0;
-  box-sizing: border-box;
-}
-
 a:visited {
   color: inherit;
 }
@@ -15,42 +10,39 @@ a {
 /*FONT*/
 /*COLORS*/
 #container-header {
-  display: flex;
-  justify-content: center;
   margin-top: 6%;
   margin-bottom: 4%;
   width: 100%;
+  padding-top: 0;
+  background-color: white;
 }
-
-#logo {
+#container-header #logo {
   display: flex;
   justify-content: center;
 }
-#logo img {
-  width: 50%;
+#container-header #logo img {
+  width: 44%;
 }
 
 #container-location {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(219, 219, 219);
+  background-color: #EAEAEA;
   width: 100%;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  box-shadow: inset 0px 8px 37px -7px rgba(0, 0, 0, 0.077);
-}
-#container-location i {
-  margin-right: 2%;
+  height: 42px;
+  font-family: "Roboto", sans-serif, "FontAwesome";
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0px 10px 15px -6px rgba(0, 0, 0, 0.115) inset;
+  border: none;
+  text-align: center;
 }
 #container-location:hover {
   box-shadow: inset 0px 8px 37px -7px rgba(0, 0, 0, 0.37);
 }
-
-.container-title {
-  font-family: "Roboto", sans-serif;
-  padding-left: 5%;
-  font-size: 25px;
+#container-location:focus {
+  outline: none;
 }
 
 #container-explore {
@@ -58,23 +50,25 @@ a {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding-top: 4%;
+  padding-top: 5%;
   background-color: rgb(243, 243, 243);
   padding-bottom: 15%;
 }
 #container-explore h2 {
   font-family: "Roboto", sans-serif;
-  padding-left: 10%;
-  padding-right: 10%;
-  font-size: 25px;
+  padding-left: 12%;
+  padding-right: 12%;
+  font-size: 22px;
+  margin-bottom: 0;
 }
 #container-explore p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 16px;
   padding-left: 6%;
   padding-right: 6%;
   padding-bottom: 4%;
+  margin-top: 3%;
 }
 #container-explore button {
   padding: 4% 5% 4% 5%;
@@ -86,7 +80,7 @@ a {
   background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
   border: none;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   transition: 0.5s;
   margin: 0 auto;
 }
@@ -96,44 +90,71 @@ a {
 }
 
 #container-functioning {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  width: 90%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  width: 100%;
+  padding-top: 9%;
+  padding-bottom: 15%;
   font-family: "Roboto", sans-serif;
+  position: relative;
+  background-color: white;
+}
+#container-functioning .container-title {
+  font-size: 21px;
 }
 #container-functioning .functioning-step {
   display: flex;
   display: flex;
   align-items: center;
-  width: 100%;
+  justify-content: center;
+  width: 85%;
+  height: 60px;
   background-color: rgb(243, 243, 243);
-  margin: 3% 5% 0 5%;
-  border-radius: 25px;
-  font-size: 20px;
+  margin: 4% auto;
+  border-radius: 15px;
+  box-shadow: 2px 3px 17px -4px rgba(0, 0, 0, 0.3019607843);
+  font-size: 15px;
 }
 #container-functioning .functioning-step:hover {
-  background-color: rgba(146, 86, 220, 0.2745098039);
+  background-color: rgba(146, 86, 220, 0.137254902);
 }
 
 .functioning-step .puces {
+  position: absolute;
   background-color: #9356DC;
+  left: 4%;
   margin-right: 2%;
-  font-size: 18px;
+  font-size: 12px;
   color: white;
   border-radius: 50%;
-  padding: 1% 2% 1% 2%;
+  padding: 2% 2% 1% 2%;
 }
 .functioning-step i {
+  position: absolute;
   color: rgb(144, 144, 144);
-  margin-left: 5%;
-  margin-right: 5%;
+  left: 15%;
 }
 .functioning-step:hover i {
-  color: rgba(146, 86, 220, 0.2745098039);
+  color: #9356DC;
+}
+
+.container-title {
+  font-family: "Roboto", sans-serif;
+  padding-left: 5%;
+  font-size: 22px;
+}
+
+.container-title-restaurant {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  padding-top: 10%;
+  background-color: #F6F6F6;
+  padding-bottom: 0%;
+  padding-left: 4%;
+  margin-bottom: 0;
 }
 
 #container-restaurant {
@@ -142,7 +163,8 @@ a {
   justify-content: center;
   width: 100%;
   padding-top: 5%;
-  background-color: rgb(243, 243, 243);
+  padding-bottom: 8%;
+  background-color: #F6F6F6;
 }
 #container-restaurant .restaurant-card {
   display: flex;
@@ -164,17 +186,18 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 250px;
+  height: 160px;
   border-radius: 25px 25px 0 0;
 }
 #container-restaurant .restaurant-card .info-card {
   margin-left: 3%;
-  height: 80px;
+  height: 55px;
 }
 #container-restaurant .restaurant-card .info-title {
-  font-size: 20px;
-  margin-bottom: 2%;
-  margin-top: 4%;
+  font-size: 16px;
+  margin-bottom: 1%;
+  margin-top: 3%;
+  font-weight: bold;
 }
 #container-restaurant .restaurant-card .info-location {
   font-weight: 300;
@@ -206,6 +229,7 @@ a {
   background-image: linear-gradient(to top, #FF79DA, #9356DC);
 }
 #container-restaurant .restaurant-card .info-new {
+  font-size: 14px;
   position: absolute;
   top: 1%;
   right: 3%;
@@ -222,47 +246,47 @@ a {
 }
 .info-card .info-like {
   position: absolute;
-  font-size: 25px;
+  font-size: 22px;
   padding: 5% 5% 5% 5%;
-  right: 0;
-  bottom: 0;
+  right: 2%;
+  bottom: 20%;
   z-index: 1;
 }
 .info-card .like-full {
   position: absolute;
-  font-size: 25px;
+  font-size: 22px;
   padding: 5% 5% 5% 5%;
-  right: 0;
-  bottom: 0;
+  right: 2%;
+  bottom: 20%;
 }
 
 #footer-container {
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  background-color: rgb(80, 80, 80);
+  background-color: #353535;
 }
 #footer-container ul {
+  padding-left: 5%;
   list-style: none;
-  padding: 5%;
-  font-size: 16px;
+  font-size: 12px;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: white;
-  padding-bottom: 0;
 }
 #footer-container ul i {
   margin-right: 10px;
-  font-size: 15px;
+  font-size: 16px;
 }
 #footer-container ul li {
-  margin-bottom: 3%;
+  margin-bottom: 5%;
 }
 
 #footer-title {
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Shrikhand";
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -324,17 +348,18 @@ a {
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%;
-    height: 250px;
+    height: 160px;
     border-radius: 25px 25px 0 0;
   }
   #container-restaurant .restaurant-card .info-card {
     margin-left: 3%;
-    height: 80px;
+    height: 55px;
   }
   #container-restaurant .restaurant-card .info-title {
-    font-size: 20px;
-    margin-bottom: 2%;
-    margin-top: 4%;
+    font-size: 16px;
+    margin-bottom: 1%;
+    margin-top: 3%;
+    font-weight: bold;
   }
   #container-restaurant .restaurant-card .info-location {
     font-weight: 300;
@@ -348,17 +373,25 @@ a {
     margin: 2% 2% 0 2%;
   }
 }
-#container-header {
-  background-color: rgb(243, 243, 243);
+#container-header-menu {
+  background-color: white;
   margin: 0;
-  padding: 5% 0 4% 0;
   position: relative;
 }
-#container-header .back-arrow {
+#container-header-menu #logo-menu {
+  display: flex;
+  justify-content: center;
+  padding-top: 6%;
+  padding-bottom: 4%;
+}
+#container-header-menu #logo-menu img {
+  width: 45%;
+}
+#container-header-menu .back-arrow {
   position: absolute;
   left: 5%;
-  top: 25%;
-  font-size: 25px;
+  top: 35%;
+  font-size: 20px;
   color: black;
 }
 
@@ -370,7 +403,7 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 350px;
+  height: 245px;
 }
 
 .container-menu {
@@ -391,7 +424,7 @@ a {
   align-items: center;
   flex-wrap: nowrap;
   font-family: "Shrikhand";
-  font-size: 25px;
+  font-size: 16px;
   margin-top: -50px;
   background-color: rgb(243, 243, 243);
 }
@@ -414,34 +447,36 @@ a {
   background-image: linear-gradient(to top, #FF79DA, #9356DC);
 }
 .menu-name h2 {
+  margin-top: 9%;
   margin-left: 5%;
   margin-right: 15%;
 }
 .menu-name .info-like {
   position: absolute;
-  right: 7%;
-  font-size: 30px;
+  right: 10%;
+  font-size: 25px;
   cursor: pointer;
 }
 .menu-name .like-full {
   position: absolute;
-  right: 7%;
-  font-size: 30px;
+  right: 10%;
+  font-size: 25px;
   cursor: pointer;
 }
 
 .menu-content {
-  margin-left: 5%;
+  margin-left: 4%;
+  margin-bottom: 4%;
 }
 .menu-content .menu-title {
-  font-size: 22px;
+  font-size: 15px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-weight: 300;
   margin-bottom: 0;
 }
 .menu-content .title-underline {
-  width: 50px;
+  width: 35px;
   border-top: 3px solid #99E2D0;
   margin-bottom: 4%;
 }
@@ -450,7 +485,7 @@ a {
   width: 95%;
   border-radius: 18px;
   position: relative;
-  margin-bottom: 4%;
+  margin-bottom: 5%;
   -webkit-animation: onLoadAnimation ease 1s;
           animation: onLoadAnimation ease 1s;
 }
@@ -464,12 +499,12 @@ a {
 }
 .menu-content .menu-dish .dish-title {
   padding-top: 3%;
-  font-size: 23px;
+  font-size: 17px;
   max-width: 70%;
 }
 .menu-content .menu-dish .dish-description {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 15px;
   padding-bottom: 3%;
   max-width: 70%;
 }
@@ -477,7 +512,7 @@ a {
   position: absolute;
   bottom: 10px;
   right: 20px;
-  font-size: 20px;
+  font-size: 15px;
 }
 .menu-content .menu-dish .dish-check {
   opacity: 0;
@@ -486,7 +521,7 @@ a {
   top: 0;
   bottom: 0;
   padding: 6%;
-  font-size: 25px;
+  font-size: 18px;
   background-color: #99E2D0;
   color: white;
   border-radius: 0 18px 18px 0;
@@ -527,13 +562,17 @@ a {
     opacity: 1;
   }
 }
+.menu-content .menu-dish a {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
 
 .order-btn {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 20%;
-  margin-top: 10%;
+  margin-top: 3%;
 }
 .order-btn button {
   padding: 4% 5% 4% 5%;
@@ -545,7 +584,7 @@ a {
   background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
   border: none;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   transition: 0.5s;
   padding-left: 10%;
   padding-right: 10%;
@@ -561,8 +600,8 @@ a {
   background-color: rgb(243, 243, 243);
   position: absolute;
   top: 0;
-  -webkit-animation: fade-out 2s;
-          animation: fade-out 2s;
+  -webkit-animation: fade-out 0s;
+          animation: fade-out 0s;
   opacity: 0;
 }
 .container-loader span {

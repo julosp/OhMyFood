@@ -1,63 +1,68 @@
 #container-header{
-    display: flex;
-    justify-content: center; 
     margin-top: 6%;
     margin-bottom: 4%;
     width: 100%;
-}
-
-#logo{
-    display: flex;
-    justify-content: center;
-    img{
-    width: 50%;
+    padding-top: 0;
+    background-color: white;
+    #logo{
+        display: flex;
+        justify-content: center;
+        img{
+        width: 44%;
+        }
     }
 }
+
+
 
 
 #container-location{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $medium-grey;
+    background-color: #EAEAEA;
     width: 100%;
-    font-family: $font-basic;
-    font-weight: $light;
-    box-shadow: inset 0px 8px 37px -7px rgba(0, 0, 0, 0.077);
-    i{
-        margin-right: 2%;
-    }
+    height: 42px;
+    font-family: $font-basic, "FontAwesome";
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0px 10px 15px -6px rgba(0, 0, 0, 0.115) inset;
+
+    border: none;
+    text-align: center;
+
     &:hover{
         box-shadow: inset 0px 8px 37px -7px rgba(0,0,0,0.37);
     }
+    &:focus{
+        outline: none;
+    }
 }
-.container-title{
-    font-family: $font-basic;
-    padding-left: 5%;
-    font-size: 25px;
-}
+
 
 #container-explore{
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    padding-top: 4%;
+    padding-top: 5%;
     background-color: $soft-grey;
     padding-bottom: 15%;
     h2{
         font-family: $font-basic;
-        padding-left: 10%;
-        padding-right: 10%;
-        font-size: 25px;
+        padding-left: 12%;
+        padding-right: 12%;
+        font-size: 22px;
+        margin-bottom: 0;
     }
     p{
         font-family: $font-basic;
         font-weight: $light;
-        font-size: 20px;
+        font-size: 16px;
         padding-left: 6%;
         padding-right: 6%;
         padding-bottom: 4%;
+        margin-top: 3%;
     }
     button{
         @include btn;
@@ -67,18 +72,23 @@
 
 
 #container-functioning{
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 90%;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    width: 100%;
+    padding-top: 9%;
+    padding-bottom: 15%;
     font-family: $font-basic;
+    position: relative;
+    background-color: white;
+    .container-title{
+        font-size: 21px;
+    }
     .functioning-step{
         display: flex;
         @include functioning;
-        font-size: 20px;
     }
 }
 
@@ -87,17 +97,33 @@
         @include puces;
     }
     i{
+        position: absolute;
         color: $dark-grey;
-        margin-left: 5%;
-        margin-right: 5%;
+        left: 15%;
     }
     &:hover{
         i{
-            color: $light-violet
+            color: $violet
         }
     }
 }
 
+.container-title{
+    font-family: $font-basic;
+    padding-left: 5%;
+    font-size: 22px;
+}
+
+.container-title-restaurant{
+    font-family: $font-basic;
+    font-size: 22px;
+    padding-top: 10%;
+    background-color: #F6F6F6;
+    padding-bottom: 0%;
+    padding-left: 4%;
+    margin-bottom: 0;
+    
+}
 
 #container-restaurant{
     display: flex;
@@ -105,7 +131,8 @@
     justify-content: center;
     width: 100%;
     padding-top: 5%;
-    background-color: $soft-grey;
+    padding-bottom: 8%;
+    background-color: #F6F6F6;
     .restaurant-card{
         @include card;
         @include like;
@@ -120,18 +147,18 @@
     position: relative;
     .info-like{
         position: absolute;
-        font-size: 25px;
+        font-size: 22px;
         padding: 5% 5% 5% 5%;
-        right: 0;
-        bottom: 0; 
+        right: 2%;
+        bottom: 20%; 
         z-index: 1;    
     }    
     .like-full{
         position: absolute;
-        font-size: 25px;
+        font-size: 22px;
         padding: 5% 5% 5% 5%;
-        right: 0;
-        bottom: 0; 
+        right: 2%;
+        bottom: 20%; 
     }
 }
 
@@ -139,29 +166,29 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    background-color: rgb(80, 80, 80);
+    background-color:#353535;
     ul{
+        padding-left: 5%;
         list-style: none;
-        padding: 5%;
-        font-size: 16px;
+        font-size: 12px;
         font-family: $font-basic;
         font-weight: $light;
         color: white;
-        padding-bottom: 0;
         i{
             margin-right: 10px;
-            font-size: 15px;
+            font-size: 16px;
         }
         li{
-            margin-bottom: 3%;
+            margin-bottom: 5%;
         }
     }
 }
 
 #footer-title{
-    font-size: 20px;
+    font-size: 18px;
     font-family: $font-logo;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 
