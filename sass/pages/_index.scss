@@ -194,9 +194,82 @@
 
 @media screen and (min-width: 768px) {
 
+    #container-location{
+        width: 70%;
+        margin: 0 auto;
+        border-radius: 25px;
+        margin-bottom: 3%;
+    }
+
+    #container-header{
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    #container-explore{
+        h2{
+            font-size: 25px;
+        }
+        p{
+
+            font-size: 20px;
+        }
+        button{
+            font-size: 18px;
+            padding: 2%;
+        }
+    }
+    #container-functioning{
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 9%;
+        padding-bottom: 15%;
+        font-family: $font-basic;
+        position: relative;
+        background-color: white;
+        .container-title{
+            font-size: 25px;
+            margin-left: -50%;
+        }
+        .functioning-step{
+            margin: 5%;
+            p{
+                font-size: 18px;
+            }
+            .puces{
+                font-size: 14px;
+            }
+        }
+    }
+    #container-restaurant{
+        flex-direction: row;
+        flex-wrap: wrap;
+        .restaurant-card{
+            position: relative;
+            width: 40%;
+
+         }
+    }
+    
+    #footer-container{
+        ul{
+        font-size: 15px;
+        }
+    }
+
+    #footer-title{
+        font-size: 22px;
+    }
 }
 
+
 @media screen and (min-width: 1024px) {
+    body{
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     #container-location{
         width: 50%;
         margin: 0 auto;
@@ -205,14 +278,15 @@
     }
 
     #container-explore{
-        width: 50%;
+        width: 70%;
         margin: 0 auto;
         border-radius: 35px;
-        padding-bottom: 2%;
+        padding-bottom: 4%;
         padding-top: 2%;
         p{
             margin: 0;
-            padding-bottom: 2%;
+            padding-bottom: 3%;
+            padding-top: 3% ;
         }
         button{
             padding: 2% 3% 2% 3%;
@@ -223,21 +297,22 @@
         padding-top: 4%;
         padding-bottom: 4%;
         .functioning-step{
-            width: 50%;
-            margin: 2% 5%;
+            margin: 3% auto;
+            width: 90%;
+            .puces{
+                padding: 1%;
+            }
         }
     }
 
     #container-restaurant{
         display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
         width: 100%;
         padding-top: 5%;
         padding-bottom: 5%;
         background-color: $soft-grey;
-        .restaurant-card{
-            @include card
-         }
     }
 
 }

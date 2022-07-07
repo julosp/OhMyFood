@@ -49,6 +49,7 @@
     font-size: 16px;
     margin-top: -50px;
     background-color: $soft-grey;
+    position: relative;
     @include like;
     h2{
         margin-top: 9%;
@@ -59,13 +60,15 @@
         position: absolute;
         right: 10%;
         font-size: 25px;
-        cursor:pointer ;
+        padding: 5% 5% 5% 5%;
+        z-index: 1;  
     }
     .like-full{
         position: absolute;
         right: 10%;
         font-size: 25px;
-        cursor:pointer ;
+        padding: 5% 5% 5% 5%;
+
     }
 }
 
@@ -89,8 +92,12 @@
     .menu-dish{
         @include menu-dish;
         @include onload;
-        a{
-            animation-delay: 2s;
+        animation-fill-mode: forwards;
+        &:nth-child(4){
+            animation-delay: 0.2s;
+        }
+        &:nth-child(5){
+            animation-delay: 0.4s;
         }
     }    
 }
@@ -106,4 +113,68 @@
         padding-left: 10%;
         padding-right: 10%;
     }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    #container-header-menu{
+        #logo-menu{
+            padding-top: 2%;
+            padding-bottom: 2%;
+            img{
+                width: 30%;
+            }
+        }
+    .back-arrow{
+        font-size: 30px;
+        top: 30%;
+        }
+    }
+
+    .image-restaurant{
+        img{
+            height: 400px;
+        }
+    }
+
+    .container-menu{
+        padding-top: 0px;
+        .menu-name{
+            h2{
+                font-size: 30px;
+            }
+            i{
+                bottom: 20%;
+                padding: 1%;
+            }
+        }
+    }
+    .menu-content{
+        .menu-title{
+            font-size: 20px;
+        }
+        .title-underline{
+            width: 8%;
+            margin-bottom: 2%;
+        }
+        .menu-dish{
+            margin-bottom: 2%;
+            .dish-check{
+                padding-top: 5%;
+            }
+        }
+
+     
+    }
+
+
+
+
+
+
+
+
+
+
 }
