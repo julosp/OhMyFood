@@ -1,4 +1,4 @@
-.container-loader{
+.loader{
     display: flex;
     justify-content: center;
     background-color: $soft-grey;
@@ -6,6 +6,7 @@
     top: 0;
     animation: fade-out 0s;
     opacity: 0;
+    height: 100%;
     span{
         position: relative;
         top: 50%;

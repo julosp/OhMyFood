@@ -1,8 +1,8 @@
-#container-header-menu{
+.header__menu{
     background-color: white;
     margin: 0;
     position: relative;
-    #logo-menu{
+    &__logo{
         display: flex;
         justify-content: center;
         padding-top: 6%;
@@ -28,7 +28,7 @@
 }
 
 
-.container-menu{
+.menu{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -36,70 +36,66 @@
     background-color: $soft-grey;
     padding-left: 0;
     padding-top: 10%;
-}
-
-.menu-name{
-    width: 100%;
-    border-radius: 25px 25px 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    font-family: $font-logo;
-    font-size: 16px;
-    margin-top: -50px;
-    background-color: $soft-grey;
-    position: relative;
-    @include like;
-    h2{
-        margin-top: 9%;
-        margin-left: 5%;
-        margin-right: 15%;
-    }
-    .info-like{
-        position: absolute;
-        right: 10%;
-        font-size: 25px;
-        padding: 5% 5% 5% 5%;
-        z-index: 1;  
-    }
-    .like-full{
-        position: absolute;
-        right: 10%;
-        font-size: 25px;
-        padding: 5% 5% 5% 5%;
-
-    }
-}
-
-
-.menu-content{
-    margin-left: 4%;
-    margin-bottom: 4%;
+    &__name{
+        width: 100%;
+        border-radius: 25px 25px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        font-family: $font-logo;
+        font-size: 16px;
+        margin-top: -50px;
+        background-color: $soft-grey;
+        position: relative;
+        @include like;
+        h2{
+            margin-top: 9%;
+            margin-left: 5%;
+            margin-right: 15%;
+        }
+        .card__info__like{
+            position: absolute;
+            right: 10%;
+            font-size: 25px;
+            padding: 5% 5% 5% 5%;
+            z-index: 1;  
+        }
+        .card__info__like__full{
+            position: absolute;
+            right: 10%;
+            font-size: 25px;
+            padding: 5% 5% 5% 5%;
     
-    .menu-title{
-        font-size: 15px;
-        font-family: $font-basic;
-        text-transform: uppercase;
-        font-weight: $light;
-        margin-bottom: 0;
+        }
     }
-    .title-underline{
-        width: 35px;
-        border-top: 3px solid $light-gray;
+    &__content{
+        margin-left: 4%;
         margin-bottom: 4%;
+        &__title{
+            font-size: 15px;
+            font-family: $font-basic;
+            text-transform: uppercase;
+            font-weight: $light;
+            margin-bottom: 0;
+        }
+        &__underline{
+            width: 35px;
+            border-top: 3px solid $light-gray;
+            margin-bottom: 4%;
+        }
+        &__dish{
+            @include menu-dish;
+            @include onload;
+            animation-fill-mode: forwards;
+            &:nth-child(4){
+                animation-delay: 0.2s;
+            }
+            &:nth-child(5){
+                animation-delay: 0.4s;
+            }
+        }    
     }
-    .menu-dish{
-        @include menu-dish;
-        @include onload;
-        animation-fill-mode: forwards;
-        &:nth-child(4){
-            animation-delay: 0.2s;
-        }
-        &:nth-child(5){
-            animation-delay: 0.4s;
-        }
-    }    
 }
 
 .order-btn{
@@ -118,8 +114,8 @@
 
 
 @media screen and (min-width: 768px) {
-    #container-header-menu{
-        #logo-menu{
+    .header__menu{
+        &__logo{
             padding-top: 2%;
             padding-bottom: 2%;
             img{
@@ -138,9 +134,9 @@
         }
     }
 
-    .container-menu{
+    .menu{
         padding-top: 0px;
-        .menu-name{
+        &__name{
             h2{
                 font-size: 30px;
             }
@@ -150,30 +146,51 @@
             }
         }
     }
-    .menu-content{
-        .menu-title{
+    .menu__content{
+        &__title{
             font-size: 20px;
         }
-        .title-underline{
+        &__underline{
             width: 8%;
             margin-bottom: 2%;
         }
-        .menu-dish{
+        &__dish{
             margin-bottom: 2%;
             .dish-check{
                 padding-top: 5%;
             }
         }
+    }
+}
 
-     
+
+@media screen and (min-width: 1024px) {
+   .header_menu_logo{
+        width: 70%;
+        margin: 0 auto;
     }
 
 
+    .menu__content{
+        &__title{
+            font-size: 20px;
+        }
+        &__underline{
+            width: 5%;
+        }
 
+        &__dish{
+            margin: 3% auto;
+            width: 80%;
+        }
+    }
 
-
-
-
+    .order-btn{
+        button{
+            font-size: 20px;
+            padding: 2% 3% 2% 3%;
+        }
+    }
 
 
 

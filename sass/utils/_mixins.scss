@@ -67,21 +67,23 @@
         height: 160px;
         border-radius: 25px 25px 0 0;
     }
-    .info-card{
+    .card__info{
         margin-left: 3%;
         height: 55px;
+        &__title{
+            font-size: 16px;
+            margin-bottom: 1%;
+            margin-top: 3%;
+            font-weight: bold;
+        }
+        &__location{
+            font-weight: $light;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
     }
-    .info-title{
-        font-size: 16px;
-        margin-bottom: 1%;
-        margin-top: 3%;
-        font-weight: bold;
-    }
-    .info-location{
-        font-weight: $light;
-        margin-bottom: 0;
-        margin-top: 0;
-    }
+
+
 
     @media (min-width: 1024px) {
         width: 30%;
@@ -92,21 +94,21 @@
 
 
 @mixin like{
-    .info-like{
+    .card__info__like{
         &:hover{
             opacity: 0;
             transition: 0.7s ease-in;
         }
     }
 
-    .like-full{
+    .card__info__like__full{
         opacity: 0;
         transition: 0.7s linear;
         scale: 0;
         transform-origin: 50% 60%;
     }
 
-    .info-like:hover~ .like-full{
+    .card__info__like:hover~ .card__info__like__full{
         opacity: 1;
         scale: 1;
         color: transparent;
