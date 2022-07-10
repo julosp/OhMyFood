@@ -9,21 +9,6 @@ a {
 
 /*FONT*/
 /*COLORS*/
-#header {
-  margin-top: 6%;
-  margin-bottom: 4%;
-  width: 100%;
-  padding-top: 0;
-  background-color: white;
-}
-#header__logo {
-  display: flex;
-  justify-content: center;
-}
-#header__logo img {
-  width: 44%;
-}
-
 #location {
   display: flex;
   justify-content: center;
@@ -204,17 +189,17 @@ a {
     margin: 2% 2% 0 2%;
   }
 }
-.restaurant__card .card__info__like:hover {
+.restaurant__card .like:hover {
   opacity: 0;
   transition: 0.7s ease-in;
 }
-.restaurant__card .card__info__like__full {
+.restaurant__card .like__full {
   opacity: 0;
   transition: 0.7s linear;
   scale: 0;
   transform-origin: 50% 60%;
 }
-.restaurant__card .card__info__like:hover ~ .card__info__like__full {
+.restaurant__card .like:hover ~ .like__full {
   opacity: 1;
   scale: 1;
   color: transparent;
@@ -238,7 +223,7 @@ a {
 .card__info {
   position: relative;
 }
-.card__info__like {
+.card__info .like {
   position: absolute;
   font-size: 22px;
   padding: 5% 5% 5% 5%;
@@ -246,7 +231,7 @@ a {
   bottom: 20%;
   z-index: 1;
 }
-.card__info__like__full {
+.card__info .like__full {
   position: absolute;
   font-size: 22px;
   padding: 5% 5% 5% 5%;
@@ -254,46 +239,11 @@ a {
   bottom: 20%;
 }
 
-.footer {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  background-color: #353535;
-}
-.footer ul {
-  padding-left: 5%;
-  list-style: none;
-  font-size: 12px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  color: white;
-}
-.footer ul i {
-  margin-right: 10px;
-  font-size: 16px;
-}
-.footer ul li {
-  margin-bottom: 5%;
-}
-.footer .footer__title {
-  font-size: 18px;
-  font-family: "Shrikhand";
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
-
 @media screen and (min-width: 768px) {
   .location {
     width: 70%;
     margin: 0 auto;
     border-radius: 25px;
-    margin-bottom: 3%;
-  }
-
-  #header {
-    display: flex;
-    justify-content: center;
-    margin-top: 3%;
     margin-bottom: 3%;
   }
 
@@ -339,14 +289,6 @@ a {
   .restaurant__card {
     position: relative;
     width: 40%;
-  }
-
-  .footer ul {
-    font-size: 15px;
-  }
-
-  .footer__title {
-    font-size: 22px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -401,28 +343,6 @@ a {
     background-color: rgb(243, 243, 243);
   }
 }
-.header__menu {
-  background-color: white;
-  margin: 0;
-  position: relative;
-}
-.header__menu__logo {
-  display: flex;
-  justify-content: center;
-  padding-top: 6%;
-  padding-bottom: 4%;
-}
-.header__menu__logo img {
-  width: 45%;
-}
-.header__menu .back-arrow {
-  position: absolute;
-  left: 5%;
-  top: 35%;
-  font-size: 20px;
-  color: black;
-}
-
 .image-restaurant {
   width: 100%;
   z-index: 1;
@@ -451,22 +371,22 @@ a {
   align-items: center;
   flex-wrap: nowrap;
   font-family: "Shrikhand";
-  font-size: 16px;
+  font-size: 15px;
   margin-top: -50px;
   background-color: rgb(243, 243, 243);
   position: relative;
 }
-.menu__name .card__info__like:hover {
+.menu__name .like:hover {
   opacity: 0;
   transition: 0.7s ease-in;
 }
-.menu__name .card__info__like__full {
+.menu__name .like__full {
   opacity: 0;
   transition: 0.7s linear;
   scale: 0;
   transform-origin: 50% 60%;
 }
-.menu__name .card__info__like:hover ~ .card__info__like__full {
+.menu__name .like:hover ~ .like__full {
   opacity: 1;
   scale: 1;
   color: transparent;
@@ -474,21 +394,21 @@ a {
           background-clip: text;
   background-image: linear-gradient(to top, #FF79DA, #9356DC);
 }
-.menu__name h2 {
+.menu__name h1 {
   margin-top: 9%;
   margin-left: 5%;
   margin-right: 15%;
 }
-.menu__name .card__info__like {
+.menu__name .like {
   position: absolute;
-  right: 10%;
+  right: 5%;
   font-size: 25px;
   padding: 5% 5% 5% 5%;
   z-index: 1;
 }
-.menu__name .card__info__like__full {
+.menu__name .like__full {
   position: absolute;
-  right: 10%;
+  right: 5%;
   font-size: 25px;
   padding: 5% 5% 5% 5%;
 }
@@ -630,18 +550,6 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .header__menu__logo {
-    padding-top: 2%;
-    padding-bottom: 2%;
-  }
-  .header__menu__logo img {
-    width: 30%;
-  }
-  .header__menu .back-arrow {
-    font-size: 30px;
-    top: 30%;
-  }
-
   .image-restaurant img {
     height: 400px;
   }
@@ -649,7 +557,7 @@ a {
   .menu {
     padding-top: 0px;
   }
-  .menu__name h2 {
+  .menu__name h1 {
     font-size: 30px;
   }
   .menu__name i {
@@ -672,11 +580,6 @@ a {
   }
 }
 @media screen and (min-width: 1024px) {
-  .header_menu_logo {
-    width: 70%;
-    margin: 0 auto;
-  }
-
   .menu__content__title {
     font-size: 20px;
   }
@@ -691,6 +594,11 @@ a {
   .order-btn button {
     font-size: 20px;
     padding: 2% 3% 2% 3%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .dish-check {
+    padding-bottom: 0 !important;
   }
 }
 .loader {
@@ -780,5 +688,111 @@ a {
     z-index: -1;
     width: 0;
     height: 0;
+  }
+}
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: #353535;
+}
+.footer ul {
+  padding-left: 5%;
+  list-style: none;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: white;
+}
+.footer ul i {
+  margin-right: 10px;
+  font-size: 16px;
+}
+.footer ul li {
+  margin-bottom: 5%;
+}
+.footer .footer__title {
+  font-size: 18px;
+  font-family: "Shrikhand";
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer ul {
+    font-size: 15px;
+  }
+
+  .footer__title {
+    font-size: 22px;
+  }
+}
+/* Header Index */
+#header {
+  margin-top: 6%;
+  margin-bottom: 4%;
+  width: 100%;
+  padding-top: 0;
+  background-color: white;
+}
+#header__logo {
+  display: flex;
+  justify-content: center;
+}
+#header__logo img {
+  width: 44%;
+}
+
+@media screen and (min-width: 768px) {
+  #header {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+}
+/* Header Restaurant */
+.header__menu {
+  background-color: white;
+  margin: 0;
+  position: relative;
+}
+.header__menu__logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 6%;
+  padding-bottom: 4%;
+}
+.header__menu__logo img {
+  width: 45%;
+}
+.header__menu .back-arrow {
+  position: absolute;
+  left: 5%;
+  top: 35%;
+  font-size: 20px;
+  color: black;
+}
+
+@media screen and (min-width: 768px) {
+  .header__menu__logo {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  .header__menu__logo img {
+    width: 30%;
+  }
+  .header__menu .back-arrow {
+    font-size: 30px;
+    top: 30%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header__menu__logo {
+    margin: 0 auto;
+  }
+  .header__menu__logo img {
+    width: 20%;
   }
 }/*# sourceMappingURL=style.css.map */

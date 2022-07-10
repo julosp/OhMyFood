@@ -94,21 +94,21 @@
 
 
 @mixin like{
-    .card__info__like{
+    .like{
         &:hover{
             opacity: 0;
             transition: 0.7s ease-in;
         }
     }
 
-    .card__info__like__full{
+    .like__full{
         opacity: 0;
         transition: 0.7s linear;
         scale: 0;
         transform-origin: 50% 60%;
     }
 
-    .card__info__like:hover~ .card__info__like__full{
+    .like:hover~ .like__full{
         opacity: 1;
         scale: 1;
         color: transparent;
