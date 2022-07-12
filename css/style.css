@@ -195,9 +195,9 @@ a {
 }
 .restaurant__card .like__full {
   opacity: 0;
-  transition: 0.7s linear;
+  transition: 0.7s ease-in;
   scale: 0;
-  transform-origin: 50% 60%;
+  transform-origin: 50% 80%;
 }
 .restaurant__card .like:hover ~ .like__full {
   opacity: 1;
@@ -246,7 +246,6 @@ a {
     border-radius: 25px;
     margin-bottom: 3%;
   }
-
   #explore h2 {
     font-size: 25px;
   }
@@ -257,7 +256,6 @@ a {
     font-size: 18px;
     padding: 2%;
   }
-
   .functioning {
     width: 50%;
     margin: 0 auto;
@@ -281,7 +279,6 @@ a {
     font-size: 14px;
     padding: 2px 5px;
   }
-
   .restaurant {
     flex-direction: row;
     flex-wrap: wrap;
@@ -297,14 +294,12 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
-
   #location {
     width: 50%;
     margin: 0 auto;
     border-radius: 25px;
     margin-bottom: 3%;
   }
-
   #explore {
     width: 70%;
     margin: 0 auto;
@@ -320,7 +315,6 @@ a {
   #explore button {
     padding: 2% 3% 2% 3%;
   }
-
   .functioning {
     padding-top: 4%;
     padding-bottom: 4%;
@@ -332,7 +326,9 @@ a {
   .functioning__step__puces {
     padding: 4px 6px;
   }
-
+  .restaurant__title {
+    padding-top: 5%;
+  }
   .restaurant {
     display: flex;
     flex-direction: row;
@@ -382,9 +378,9 @@ a {
 }
 .menu__name .like__full {
   opacity: 0;
-  transition: 0.7s linear;
+  transition: 0.7s ease-in;
   scale: 0;
-  transform-origin: 50% 60%;
+  transform-origin: 50% 80%;
 }
 .menu__name .like:hover ~ .like__full {
   opacity: 1;
@@ -553,7 +549,6 @@ a {
   .image-restaurant img {
     height: 400px;
   }
-
   .menu {
     padding-top: 0px;
   }
@@ -564,7 +559,6 @@ a {
     bottom: 20%;
     padding: 1%;
   }
-
   .menu__content__title {
     font-size: 20px;
   }
@@ -578,6 +572,12 @@ a {
   .menu__content__dish .dish-check {
     padding-top: 5%;
   }
+  .like {
+    top: 20%;
+  }
+  .like__full {
+    top: 20%;
+  }
 }
 @media screen and (min-width: 1024px) {
   .menu__content__title {
@@ -590,7 +590,9 @@ a {
     margin: 3% auto;
     width: 80%;
   }
-
+  .order-btn {
+    margin-bottom: 15%;
+  }
   .order-btn button {
     font-size: 20px;
     padding: 2% 3% 2% 3%;
@@ -607,10 +609,10 @@ a {
   background-color: rgb(243, 243, 243);
   position: absolute;
   top: 0;
-  -webkit-animation: fade-out 0s;
-          animation: fade-out 0s;
+  bottom: 0;
+  -webkit-animation: fade-out 2s;
+          animation: fade-out 2s;
   opacity: 0;
-  height: 100%;
 }
 .loader span {
   position: relative;
@@ -723,7 +725,6 @@ a {
   .footer ul {
     font-size: 15px;
   }
-
   .footer__title {
     font-size: 22px;
   }

@@ -4,9 +4,10 @@
     background-color: $soft-grey;
     position: absolute;
     top: 0;
+    bottom: 0;
     animation: fade-out 2s;
     opacity: 0;
-    height: 100%;
+    
     span{
         position: relative;
         top: 50%;

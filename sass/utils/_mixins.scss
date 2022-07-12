@@ -99,18 +99,19 @@
             opacity: 0;
             transition: 0.7s ease-in;
         }
+        &__full{
+            opacity: 0;
+            transition: 0.7s ease-in;
+            scale: (0);
+            transform-origin: 50% 80%;
+        }
     }
 
-    .like__full{
-        opacity: 0;
-        transition: 0.7s linear;
-        scale: 0;
-        transform-origin: 50% 60%;
-    }
+    
 
     .like:hover~ .like__full{
         opacity: 1;
-        scale: 1;
+        scale: (1);
         color: transparent;
         background-clip: text;
         background-image: linear-gradient(to top, $pink, $violet);
