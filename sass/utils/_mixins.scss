@@ -91,13 +91,13 @@
   .like {
     &:hover {
       opacity: 0;
-      transition: 0.7s ease-in;
+      transition: 1s ease-in;
     }
     &__full {
       opacity: 0;
-      transition: 0.7s ease-in;
+      transition: 1s ease-in;
       transform: scale(0);
-      transform-origin: 50% 80%;
+      transform-origin: 50% 60%;
     }
   }
 
