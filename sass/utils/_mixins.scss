@@ -165,6 +165,7 @@
     bottom: 10px;
     right: 20px;
     font-size: 15px;
+    transform: translateX(50%);
   }
   /*DISH CHECK ANIMATION*/
   .dish-check {
@@ -178,7 +179,7 @@
     background-color: $light-gray;
     color: white;
     border-radius: 0 18px 18px 0;
-    transform: translateX(50%);
+    transform: translateX(100%);
     i {
       transition: transform 2s ease;
       transform: rotate(180deg);
@@ -194,7 +195,14 @@
       }
     }
     .dish-price {
-      right: 20%;
+      transition: transform 2s ease;
+      transform: translateX(-140%);
+    }
+    .dish-title {
+      max-width: 60%;
+    }
+    .dish-description {
+      max-width: 60%;
     }
   }
 }
