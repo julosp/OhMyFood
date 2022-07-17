@@ -108,6 +108,14 @@
     background-clip: text;
     background-image: linear-gradient(to top, $pink, $violet);
   }
+
+  @media screen and (min-width: 768px) {
+    .like {
+      &__full {
+        transform-origin: 50% 80%;
+      }
+    }
+  }
 }
 
 /*INDEX RESTAURANT NEW*/
@@ -203,6 +211,16 @@
     }
     .dish-description {
       max-width: 60%;
+    }
+    @media screen and (min-width: 768px) {
+      .dish-price {
+        transform: translateX(-220%);
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      .dish-price {
+        transform: translateX(-250%);
+      }
     }
   }
 }
