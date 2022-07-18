@@ -530,7 +530,7 @@ a {
   transform: rotate(360deg);
 }
 .menu__content__dish:hover .dish-price {
-  transition: transform 1s ease;
+  transition: transform 0.5s ease;
   transform: translateX(-140%);
 }
 .menu__content__dish:hover .dish-title {
